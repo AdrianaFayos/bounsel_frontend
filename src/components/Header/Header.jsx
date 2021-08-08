@@ -1,9 +1,11 @@
 import React from 'react';
+import './Header.css';
 import { connect } from 'react-redux';
 import { LOGOUT } from '../../redux/types';
 import { useHistory } from 'react-router-dom';
 
 const Header = (props) => {
+    
     let history = useHistory();
 
     const logOut = () => {
@@ -17,9 +19,12 @@ const Header = (props) => {
             <div className="headerContainer">
 
                 <div className="headerUser">
-                    {/* <Link path="/profile" destination={props.credentials?.user.firstname}/> */}
+                    <div onClick={() => history.push('/profile')} className="link">
+                       {props.credentials?.user.name}
+                    </div>
+
                     <p>|</p>
-                    <div className="linkLogout" onClick={() => logOut()}>LOGOUT</div>
+                    <div className="link" onClick={() => logOut()}>LOGOUT</div>
                 </div>
             </div>
         )
@@ -29,10 +34,12 @@ const Header = (props) => {
             <div className="headerContainer">
                 
                 <div className="loginregister">
-                    <div onClick={() => history.push('/login')} className="headerUser">
+                    <div onClick={() => history.push('/login')} className="link">
                         LOGIN
                     </div>
-                    <div onClick={() => history.push('/register')} className="headerUser">
+                    <p>|</p>
+
+                    <div onClick={() => history.push('/register')} className="link">
                         REGISTER
                     </div>
                 </div>
