@@ -1,24 +1,10 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import './Profile.css'
-import { useHistory } from "react-router-dom";
+import './Records.css'
 import { connect } from "react-redux";
-import { LOGOUT } from "../../redux/types";
 
+const Records = (props) => {
 
-const Profile = (props) => {
-  
-  let history = useHistory();
-
-  const logOut = () => {
-    props.dispatch({ type: LOGOUT });
-    
-    history.push("/");;
-  };
-
-  const records = () => {    
-    history.push("/records");;
-  };
 
     if(props.credentials?.user.id) {
         return(
@@ -31,17 +17,8 @@ const Profile = (props) => {
                   <p>NAME : {props.credentials?.user.name} </p>
                   <p>LASTNAME : {props.credentials?.user.lastname} </p>
                   <p>EMAIL : {props.credentials?.user.email} </p>
-                  <div className="buttonsProfile">
-
-                   <div onClick={() => records()} className="button">
-                       RECORDS
-                    </div>
-
-                    <div className="button" onClick={() => logOut()}>
-                      LOGOUT
-                    </div>
                 </div>
-              </div>  
+   
             </div>
         )
     } else {
@@ -63,4 +40,4 @@ const Profile = (props) => {
 
 export default connect((state) => ({
   credentials: state.credentials,
-}))(Profile);
+}))(Records);
