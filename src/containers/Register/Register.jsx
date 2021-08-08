@@ -114,26 +114,26 @@ const Register = (props) => {
 
 
                 <div className="box">
-                    <input className="input" placeholder="Name" name="name" type="text" onChange={updateFormulario} onBlur={()=>checkError("name")} />
+                    <input className="input" placeholder="Name" name="name" type="text" onChange={updateFormulario} onBlur={()=>checkError("name")} required/>
                     <div className="errorsText1">{errors.eName}</div>
                 </div>
 
                 <div className="box">
-                    <input className="input" placeholder="Lastname" name="lastname" type="text" onChange={updateFormulario} onBlur={()=>checkError("lastname")} />
+                    <input className="input" placeholder="Lastname" name="lastname" type="text" onChange={updateFormulario} onBlur={()=>checkError("lastname")} required/>
                     <div className="errorsText1">{errors.eLastname}</div>
                 </div>
             
                 <div className="box">
-                    <input className="input" placeholder="Email" name="email" type="text" onChange={updateFormulario} onBlur={()=>checkError("email")} />     
+                    <input className="input" placeholder="Email" name="email" type="text" onChange={updateFormulario} onBlur={()=>checkError("email")} required/>     
                     <div className="errorsText1">{errors.eEmail}</div>
                 </div>
                 <div className="box">
-                    <input placeholder="Password" className="input" name="password" type="password" onChange={updateFormulario} onBlur={()=>checkError("password")}/>
+                    <input placeholder="Password" className="input" name="password" type="password" onChange={updateFormulario} onBlur={()=>checkError("password")} required/>
                     {/* <div className="errorsText1">{errors.ePassword}</div> */}
                 </div>
 
                 <div className="box">
-                    <input placeholder="Confirm Password" className="input" name="password2" type="password" onChange={updateFormulario} onBlur={()=>checkError("password2")}/>
+                    <input placeholder="Confirm Password" className="input" name="password2" type="password" onChange={updateFormulario} onBlur={()=>checkError("password2")} required/>
                     <div className="errorsText1">{errors.ePassword2}</div>
                 </div>
 
