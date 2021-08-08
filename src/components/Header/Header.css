@@ -1,0 +1,56 @@
+.headerContainer {
+    height:  5em;
+    width: 100vw;
+    color: rgb(78, 64, 100);    
+    background-color: rgb(161, 241, 237);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 1em;
+    transition: .2s;
+}
+
+.logo:hover{
+    cursor: pointer;
+    transition: .2s;
+    transform: scale(1.04);
+}
+
+.loginregister {
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerUser{ 
+    color: rgb(121, 99, 155);  
+    height: 1.5em;
+    margin: 0.5em;
+    padding: .5em;
+    border-radius: 0.2em;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.link {
+    margin: 1em;
+    transition: 0.2s;
+}
+
+
+.link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.2s;
+}
