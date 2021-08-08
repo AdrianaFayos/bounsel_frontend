@@ -5,14 +5,20 @@
     background-color: rgb(161, 241, 237);
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
 }
 
-.logoHeader {
+.logo{
     margin-left: 1em;
-    margin-top: 2em;
+    transition: .2s;
+}
+
+.logo:hover{
+    cursor: pointer;
+    transition: .2s;
+    transform: scale(1.04);
 }
 
 .loginregister {

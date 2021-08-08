@@ -3,6 +3,7 @@ import './Header.css';
 import { connect } from 'react-redux';
 import { LOGOUT } from '../../redux/types';
 import { useHistory } from 'react-router-dom';
+import logo from './../../img/logo_web_upv-1.png'
 
 const Header = (props) => {
     
@@ -17,6 +18,9 @@ const Header = (props) => {
     if (props.credentials?.user.id){
         return(
             <div className="headerContainer">
+                <div className="logo" onClick={() => history.push('/')}>
+                    <img src={logo} alt="logo" width="80"/>
+                </div>
 
                 <div className="headerUser">
                     <div onClick={() => history.push('/profile')} className="link">
@@ -32,7 +36,10 @@ const Header = (props) => {
         return (
 
             <div className="headerContainer">
-                
+                <div className="logo" onClick={() => history.push('/')}>
+                    <img src={logo} alt="logo" width="80"/>
+                </div>
+
                 <div className="loginregister">
                     <div onClick={() => history.push('/login')} className="link">
                         LOGIN

@@ -15,7 +15,7 @@ const Home = (props) => {
                 <div className="homeContainer1">
                     <Header />
                     <div className="homeContent">
-                        <p className="text1">SOY HOME CON USUARIO LOGIN</p>
+                        <p className="text1">Hi {props.credentials?.user.name}!</p>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@ const Home = (props) => {
                 <div className="homeContainer1">
                     <Header />
                     <div className="homeContent">
-                        <p className="text1">All the movies you want, and much more.</p>
+                        <p className="text1">Welcome to Bounsel Record System</p>
                     </div>
                 </div>
             </div>
